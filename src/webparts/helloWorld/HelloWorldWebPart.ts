@@ -1,3 +1,10 @@
+// blind require statements
+require("tslib");
+require("@pnp/logging");
+require("@pnp/common");
+require("@pnp/odata");
+require("@pnp/sp-clientsvc");
+require("@pnp/sp-taxonomy");
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { Version } from '@microsoft/sp-core-library';
@@ -25,7 +32,7 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
     });
     const service = new SPTaxonomyService();
     const terms = await service.GetAllTerms();
-    this.description = terms.reduce((x, y) => `${x}\r\n${y}`);
+    console.log(terms.reduce((x, y) => `${x}\r\n${y}`).substr(0, 255));
   }
   public render(): void {
     const element: React.ReactElement<IHelloWorldProps > = React.createElement(
