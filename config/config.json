@@ -1,0 +1,79 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "hello-world-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/helloWorld/HelloWorldWebPart.js",
+          "manifest": "./src/webparts/helloWorld/HelloWorldWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {
+    "lodash": {
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js",
+      "globalName": "lodash"
+    },
+    "moment": "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js",
+    "@pnp/sp": {
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/pnp-sp/1.1.5-4/sp.es5.umd.min.js",
+      "globalName": "pnp.sp",
+      "globalDependencies": [
+        "@pnp/logging",
+        "@pnp/common",
+        "@pnp/odata",
+        "tslib"
+      ]
+    },
+    "@pnp/odata": {
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/pnp-odata/1.1.5-4/odata.es5.umd.min.js",
+      "globalName": "pnp.odata",
+      "globalDependencies": [
+        "@pnp/common",
+        "@pnp/logging",
+        "tslib"
+      ]
+    },
+    "@pnp/common": {
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/pnp-common/1.1.5-4/common.es5.umd.bundle.min.js",
+      "globalName": "pnp.common"
+    },
+    "@pnp/logging": {
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/pnp-logging/1.1.5-4/logging.es5.umd.min.js",
+      "globalName": "pnp.logging",
+      "globalDependencies": [
+        "tslib"
+      ]
+    },
+    "@pnp/sp-clientsvc": {
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/pnp-sp-clientsvc/1.1.5-4/sp-clientsvc.es5.umd.min.js",
+      "globalName": "pnp.clientsvc",
+      "globalDependencies": [
+        "@pnp/logging",
+        "@pnp/common",
+        "@pnp/odata",
+        "tslib"
+      ]
+    },
+    "@pnp/sp-taxonomy": {
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/pnp-sp-taxonomy/1.1.5-4/sp-taxonomy.es5.umd.min.js",
+      "globalName": "pnp.taxonomy",
+      "globalDependencies": [
+        "@pnp/logging",
+        "@pnp/common",
+        "@pnp/odata",
+        "@pnp/sp-clientsvc",
+        "tslib"
+      ]
+    },
+    "tslib": {
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/tslib/1.9.3/tslib.min.js",
+      "globalName": "tslib"
+    }
+  },
+  "localizedResources": {
+    "HelloWorldWebPartStrings": "lib/webparts/helloWorld/loc/{locale}.js"
+  }
+}
