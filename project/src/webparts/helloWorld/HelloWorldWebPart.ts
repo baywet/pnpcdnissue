@@ -19,6 +19,7 @@ import * as strings from 'HelloWorldWebPartStrings';
 import HelloWorld from './components/HelloWorld';
 import { IHelloWorldProps } from './components/IHelloWorldProps';
 import { SPTaxonomyService } from './SPTaxonomyService';
+// import { SPTaxonomyService } from 'pnpcdnissuelibrary';
 
 export interface IHelloWorldWebPartProps {
   description: string;
@@ -30,7 +31,7 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
     sp.setup({
       spfxContext: this.context,
     });
-    const service = new SPTaxonomyService();
+    const service = new SPTaxonomyService('a53ab75f-a049-42cc-a6cf-9ba9d04b7ffe');
     const terms = await service.GetAllTerms();
     console.log(terms.reduce((x, y) => `${x}\r\n${y}`).substr(0, 255));
   }

@@ -1,26 +1,12 @@
 ## pnpcdnissue
 
-This is where you include your WebPart documentation.
+reproduces the dedup issue with common dependencies on node modules
 
-### Building the code
+## get it working
+- open `src/webparts/HelloWorldWebPart.ts` replace the id by any term set id.  
+- (in project) `gulp clean` then `gulp build` then `gulp bundle --ship`, open `temp/deploy/` note the hello webpart js file size.
+- (in library) `npm run build` then `npm link`
+- in the webpart file replace `import { SPTaxonomyService } from './SPTaxonomyService';` by `import { SPTaxonomyService } from 'pnpcdnissuelibrary';`
+- (in project) `npm link pnpcdnissuelibrary` then `gulp clean` then `gulp build` then `gulp bundle --ship`, open `temp/deploy/` note the hello webpart js file size.
 
-```bash
-git clone the repo
-npm i
-npm i -g gulp
-gulp
-```
-
-This package produces the following:
-
-* lib/* - intermediate-stage commonjs build artifacts
-* dist/* - the bundled script, along with other resources
-* deploy/* - all resources which should be uploaded to a CDN.
-
-### Build options
-
-gulp clean - TODO
-gulp test - TODO
-gulp serve - TODO
-gulp bundle - TODO
-gulp package-solution - TODO
+File size is different

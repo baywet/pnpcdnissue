@@ -1,0 +1,42 @@
+{
+  "name": "pnpcdnissuelibrary",
+  "version": "1.0.0",
+  "description": "demonstration library for the cdn issue and dedup",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "publish": "npm run build",
+    "deploy": "npm run build && npm publish",
+    "test": "karma start --no-auto-watch --single-run",
+    "starttest": "karma start --auto-watch --no-single-run",
+    "build": "tslint src/**/*.ts --project ./tsconfig.json -c ./tslint.json && tsc"
+  },
+  "keywords": [
+    "pnp",
+    "cdn",
+    "dedup",
+    "library"
+  ],
+  "author": "Vincent Biret",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baywet/pnpcdnissue"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@pnp/common": "^1.1.5-4",
+    "@pnp/logging": "^1.1.5-4",
+    "@pnp/odata": "^1.1.5-4",
+    "@pnp/sp": "^1.1.5-4",
+    "@pnp/sp-clientsvc": "^1.1.5-4",
+    "@pnp/sp-taxonomy": "^1.1.5-4"
+  },
+  "devDependencies": {
+    "@types/core-js": "^2.5.0",
+    "@types/sharepoint": "^2016.1.1",
+    "core-js": "^2.5.7",
+    "tslint": "^5.11.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "typescript": "^3.0.3"
+  }
+}
