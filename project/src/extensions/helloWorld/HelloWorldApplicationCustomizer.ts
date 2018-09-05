@@ -1,3 +1,10 @@
+// blind require statements
+require("tslib");
+require("@pnp/logging");
+require("@pnp/common");
+require("@pnp/odata");
+require("@pnp/sp-clientsvc");
+require("@pnp/sp-taxonomy");
 import { override } from '@microsoft/decorators';
 import { Log } from '@microsoft/sp-core-library';
 import {
@@ -6,6 +13,8 @@ import {
 import { Dialog } from '@microsoft/sp-dialog';
 
 import * as strings from 'HelloWorldApplicationCustomizerStrings';
+import { sp } from '@pnp/sp';
+import { SPTaxonomyService } from '../../webparts/helloWorld/SPTaxonomyService';
 
 const LOG_SOURCE: string = 'HelloWorldApplicationCustomizer';
 
@@ -24,16 +33,15 @@ export default class HelloWorldApplicationCustomizer
   extends BaseApplicationCustomizer<IHelloWorldApplicationCustomizerProperties> {
 
   @override
-  public onInit(): Promise<void> {
+  public async onInit(): Promise<void> {
     Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
 
-    let message: string = this.properties.testMessage;
-    if (!message) {
-      message = '(No properties were provided.)';
-    }
-
-    Dialog.alert(`Hello from ${strings.Title}:\n\n${message}`);
-
-    return Promise.resolve();
+    await super.onInit();
+    sp.setup({
+      spfxContext: this.context,
+    });
+    const service = new SPTaxonomyService('a53ab75f-a049-42cc-a6cf-9ba9d04b7ffe');
+    const terms = await service.GetAllTerms();
+    console.log(terms.reduce((x, y) => `${x}\r\n${y}`).substr(0, 255));
   }
 }
