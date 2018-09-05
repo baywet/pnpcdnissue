@@ -18,7 +18,7 @@
     },
     "moment": "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js",
     "@pnp/sp": {
-      "path": "https://cdnjs.cloudflare.com/ajax/libs/pnp-sp/1.1.5-4/sp.es5.umd.min.js",
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/pnp-sp/1.2.0/sp.es5.umd.min.js",
       "globalName": "pnp.sp",
       "globalDependencies": [
         "@pnp/logging",
@@ -28,7 +28,7 @@
       ]
     },
     "@pnp/odata": {
-      "path": "https://cdnjs.cloudflare.com/ajax/libs/pnp-odata/1.1.5-4/odata.es5.umd.min.js",
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/pnp-odata/1.2.0/odata.es5.umd.min.js",
       "globalName": "pnp.odata",
       "globalDependencies": [
         "@pnp/common",
@@ -37,18 +37,18 @@
       ]
     },
     "@pnp/common": {
-      "path": "https://cdnjs.cloudflare.com/ajax/libs/pnp-common/1.1.5-4/common.es5.umd.bundle.min.js",
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/pnp-common/1.2.0/common.es5.umd.bundle.min.js",
       "globalName": "pnp.common"
     },
     "@pnp/logging": {
-      "path": "https://cdnjs.cloudflare.com/ajax/libs/pnp-logging/1.1.5-4/logging.es5.umd.min.js",
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/pnp-logging/1.2.0/logging.es5.umd.min.js",
       "globalName": "pnp.logging",
       "globalDependencies": [
         "tslib"
       ]
     },
     "@pnp/sp-clientsvc": {
-      "path": "https://cdnjs.cloudflare.com/ajax/libs/pnp-sp-clientsvc/1.1.5-4/sp-clientsvc.es5.umd.min.js",
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/pnp-sp-clientsvc/1.2.0/sp-clientsvc.es5.umd.min.js",
       "globalName": "pnp.clientsvc",
       "globalDependencies": [
         "@pnp/logging",
@@ -58,7 +58,7 @@
       ]
     },
     "@pnp/sp-taxonomy": {
-      "path": "https://cdnjs.cloudflare.com/ajax/libs/pnp-sp-taxonomy/1.1.5-4/sp-taxonomy.es5.umd.min.js",
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/pnp-sp-taxonomy/1.2.0/sp-taxonomy.es5.umd.min.js",
       "globalName": "pnp.taxonomy",
       "globalDependencies": [
         "@pnp/logging",
