@@ -1,10 +1,3 @@
-// blind require statements
-require("tslib");
-require("@pnp/logging");
-require("@pnp/common");
-require("@pnp/odata");
-require("@pnp/sp-clientsvc");
-require("@pnp/sp-taxonomy");
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { Version } from '@microsoft/sp-core-library';
@@ -13,7 +6,7 @@ import {
   IPropertyPaneConfiguration,
   PropertyPaneTextField
 } from '@microsoft/sp-webpart-base';
-import { sp } from '@pnp/sp';
+import { sp } from '@pnp/pnpjs';
 
 import * as strings from 'HelloWorldWebPartStrings';
 import HelloWorld from './components/HelloWorld';

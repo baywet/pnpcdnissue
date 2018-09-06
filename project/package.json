@@ -11,14 +11,14 @@
     "test": "gulp test"
   },
   "dependencies": {
+    "@microsoft/decorators": "1.5.1",
+    "@microsoft/sp-application-base": "1.5.1",
     "@microsoft/sp-core-library": "1.5.1",
+    "@microsoft/sp-dialog": "1.5.1",
     "@microsoft/sp-lodash-subset": "1.5.1",
     "@microsoft/sp-office-ui-fabric-core": "1.5.1",
     "@microsoft/sp-webpart-base": "1.5.1",
-    "@pnp/common": "^1.2.1",
-    "@pnp/logging": "^1.2.1",
-    "@pnp/odata": "^1.2.1",
-    "@pnp/sp": "^1.2.1",
+    "@pnp/pnpjs": "^1.2.1",
     "@pnp/sp-clientsvc": "^1.2.1",
     "@pnp/sp-taxonomy": "^1.2.1",
     "@types/es6-promise": "0.0.33",
@@ -26,10 +26,7 @@
     "@types/react-dom": "15.5.6",
     "@types/webpack-env": "1.13.1",
     "react": "15.6.2",
-    "react-dom": "15.6.2",
-    "@microsoft/decorators": "1.5.1",
-    "@microsoft/sp-dialog": "1.5.1",
-    "@microsoft/sp-application-base": "1.5.1"
+    "react-dom": "15.6.2"
   },
   "devDependencies": {
     "@microsoft/sp-build-web": "1.5.1",

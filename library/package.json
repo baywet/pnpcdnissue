@@ -24,10 +24,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@pnp/common": "^1.2.1",
-    "@pnp/logging": "^1.2.1",
-    "@pnp/odata": "^1.2.1",
-    "@pnp/sp": "^1.2.1",
+    "@pnp/pnpjs": "^1.2.1",
     "@pnp/sp-clientsvc": "^1.2.1",
     "@pnp/sp-taxonomy": "^1.2.1"
   },

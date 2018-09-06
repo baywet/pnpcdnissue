@@ -1,8 +1,4 @@
 // blind require statements
-require("tslib");
-require("@pnp/logging");
-require("@pnp/common");
-require("@pnp/odata");
 require("@pnp/sp-clientsvc");
 require("@pnp/sp-taxonomy");
 import { override } from '@microsoft/decorators';
@@ -13,7 +9,7 @@ import {
 import { Dialog } from '@microsoft/sp-dialog';
 
 import * as strings from 'HelloWorldApplicationCustomizerStrings';
-import { sp } from '@pnp/sp';
+import { sp } from '@pnp/pnpjs';
 import { SPTaxonomyService } from '../../webparts/helloWorld/SPTaxonomyService';
 
 const LOG_SOURCE: string = 'HelloWorldApplicationCustomizer';
